@@ -1,15 +1,34 @@
 # JavaScript
-
+JS es backwards compatible
+https://jsconsole.com/
 
 ## Declarar variables
 
-el tipo de dato se determina en tiempo de ejecución, por el tipado 
+el tipo de dato se determina en tiempo de ejecución, por el tipado.
+- __var__: Forma de declarar las variables hasta ECMAScript 5. Casi ya no se usa porque es de forma global y tiene las siguientes características:
+  - Se puede reinicializar
+  - Se puede reasignar
+  - Su alcance es global
+
+```const``` y ```let``` es la forma en que se declaran las variables a partir de ECMAScript 6
+
+- __const__: declara constantes
+  - No se puede reinicilizar
+  - No se pude reasignar
+  - No es inmutable: osea no puede cambiar con objetos:
+
+- __let__: declara variables
+  - No se puede reinicilizar
+  - Se puede reasignar
+  - Su contexto de es bloque: Solo funciona dentro de un bloque {}, fuera de ello no.
 
 ```js
-// declarar variable, opcional inicializar su valor
-var age=30
+var name; // declarar
+var age=30  // declara variable e inicializa su valor
+var age =15 //  Se reinicializa
 let time
-time=12
+time=12 // inicializa
+time=24 // reasigna
 
 // constante, necesario declarar e inicializar
 const name=Italivi
@@ -65,7 +84,7 @@ console.log(persona["rank"]); // 9567
 __Booleanos__ representan ```true``` o ```false```
 
 
-__null__ es un tipo de dato que representa un valor vacío o nulo. A menudo, es para representar un valor que aún no ha sido inicializado o para representar un valor que no tiene sentido en el contexto actual.
+__null__ es un [tipo de dato que se puede comportar como objeto](https://2ality.com/2013/10/typeof-null.html) que representa un valor vacío o nulo. A menudo, es para representar un valor que aún no ha sido inicializado o para representar un valor que no tiene sentido en el contexto actual.
 ```js
 const nombre = null;
 console.log(nombre); // imprime "null"
@@ -108,16 +127,17 @@ console.log(numeroGrande + 1n); // 12345678901234567891n
 console.log(numeroGrande * 2n); // 2469135780246913578n
 console.log(numeroGrande / 3n); // 411218936707805260n
 ```
-Es importante tener en cuenta que los bigint solo pueden ser usados para operaciones matemáticas y no pueden ser usados con operadores de comparación, como ```==``` o ```===```. En su lugar, debes usar los métodos ```BigInt.asIntN``` y ```BigInt.asUintN``` para hacer comparaciones entre bigint y números normales.
+Los bigint solo pueden ser usados para operaciones matemáticas y no pueden ser usados con operadores de comparación, como ```==``` o ```===```. En su lugar, debes usar los métodos ```BigInt.asIntN``` y ```BigInt.asUintN``` para hacer comparaciones entre bigint y números normales.
 
-También es importante tener en cuenta que los _bigint_ no son compatibles con todas las funciones y métodos de JavaScript que aceptan números, por lo que debes asegurarte de verificar la documentación de la función o método que quieres usar antes de intentar usar bigInt con ellos.
+Los _bigint_ no son compatibles con todas las funciones y métodos de JavaScript que aceptan números, por lo que debes asegurarte de verificar la documentación de la función o método que quieres usar antes de intentar usar bigInt con ellos.
 
 
 
 
 ## Funciones
 
-Function declaration
+### Function declaration o function statement
+Se le aplica hoisting
 ```js
 // declaracion de funcion
 function nombreFuncion(parametro1, parametro2) {
@@ -132,7 +152,8 @@ let resultado = nombreFuncion(valor1, valor2);
 console.log(resultado);
 ```
 
-IIFE (Immediately Invoked Function Expression)
+
+### IIFE (Immediately Invoked Function Expression)
 una función que se autoejecuta inmediatamente después de ser definida, esta es anónima y no se puede reutilizar
 ```js
 (function () {
@@ -140,7 +161,8 @@ una función que se autoejecuta inmediatamente después de ser definida, esta es
 })();
 ```
 
-Función expresión
+
+### function expression (anonima)
 Se define como una expresión y puede ser asignada a una variable, puede ser llamada y reutilizada.
 ```js
 let saluda = function () {
@@ -150,7 +172,8 @@ let saluda = function () {
 saluda();
 ```
 
-Arrow function
+
+### Arrow function
 Se define utilizando la sintaxis ```() =>```. Es una forma más concisa de escribir funciones y es útil para funciones de una sola línea.
 ```js
 let saluda = () => console.log("Hola");
