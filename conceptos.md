@@ -15,16 +15,18 @@ Sucede en la version 5 y anteriores, y es aplicable solo a __var__ y __function_
 
 ## Coerción
 
-or otro lado, coercion es el proceso en el cual JavaScript intenta convertir automáticamente un valor de un tipo a otro, para que puedan ser comparados o operados. Esto puede dar lugar a algunos resultados inesperados si no se tiene en cuenta.
+Es el proceso en el cual JavaScript intenta convertir automáticamente un valor de un tipo a otro, para que puedan ser comparados o operados. Esto puede dar lugar a algunos resultados inesperados si no se tiene en cuenta.
     - implicitas (los tipos se convierten automaticamente)
     - explicitas (forza la conversion de tipos)
 
 
-## Operadores
+## [Operadores (unitarios y binarios)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
-Permiten realizar calculos y comparaciones
- - aritmeticos      + , - , * , / , %
- - de asignación    = , += , -= , *= , /=
- - de comparación   < , > , <= , >= , !== , == , ===
- - lógicos          && , || , !
- - 
+Permiten realizar calculos y comparaciones, no olvidar considerar su orden de prioridad, prelación y precedencia.
+ - aritmeticos      ```+``` , ```-``` , ```*``` , ```/``` , ```%```
+ - de asignación    ```=``` , combinados ```+=``` , ```-=``` , ```*=``` , ```/=```
+ - de comparación   ```<``` , ```>``` , ```<=``` , ```>=``` , ```!==``` , ```==``` , ```===```
+ - lógicos          ```&&``` , ```||``` , ```!```
+ - concatenación    ```+```
+
+

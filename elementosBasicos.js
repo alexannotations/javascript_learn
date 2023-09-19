@@ -23,6 +23,14 @@ var c = String(a);
 var d = Number(c);
 
 
+// ParseInt vs Number
+// ParseInt: Analiza la cadena desde el primer dígito, hasta que encuentre algo que no sea dígito y devuelve lo que haya analizado.
+parseInt("123hui") //123
+// Number: Busca convertir toda la cadena en un número, por lo que al encontrarse con un elemento que no sea diginto nos dara como resultado NAN.
+Number("123hui") //NaN
+parseInt("hui123") = NaN
+
+
 // función declarativa
 function miFuncion(){
 return 3;
@@ -46,4 +54,10 @@ function saluda(){
     console.log("hola "+miName);
 }
 var miName="Italivi";   // pero la variable aun no se inicializaba
+
+
+// Operadores: Asignación, Comparación y Aritméticos
+0 == "0" ;   // true
+0 == [] ;    // true
+[] == "0" ;   // false
 

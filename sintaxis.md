@@ -81,7 +81,13 @@ console.log(persona["rank"]); // 9567
 ```
 
 
-__Booleanos__ representan ```true``` o ```false```
+__Booleanos__ representan valores ```truthy``` y ```falsy```
+Un valor falsy es aquel que es falso ```false``` en un contexto booleano, estos son: ```0```, ```""``` (string vacío), ```false```, ```NaN```, ```undefined``` o ```null```.
+Un valor truthy es aquel que es verdadero ```true``` en un contexto booleano, son todos los valores que no sean falsy, incluyendo los numeros negativos, estructuras vacías de array ```[]``` y objetos ```{}```, funciones ```function func(){}```.
+```js
+Boolean();  // false
+Boolean(NaN);  // false, non an number
+```
 
 
 __null__ es un [tipo de dato que se puede comportar como objeto](https://2ality.com/2013/10/typeof-null.html) que representa un valor vacío o nulo. A menudo, es para representar un valor que aún no ha sido inicializado o para representar un valor que no tiene sentido en el contexto actual.
