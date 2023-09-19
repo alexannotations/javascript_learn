@@ -98,6 +98,7 @@ console.log(nombre); // imprime "null"
 
 
 __undefined__ representa un valor que aún no ha sido asignado o que no tiene un valor válido.
+Es el valor que se asigna por defecto a las variables cuando caen en __hoisting__
 ```js
 let nombre;
 console.log(nombre); // imprime "undefined"
