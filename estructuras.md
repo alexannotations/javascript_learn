@@ -43,13 +43,50 @@ switch (expresion) {
 ## Bucles
 
 __for__
-``` for ```
+``` for (<inicio>; <comparación>; <paso>) { <bloque de código> } ```
+Para el ciclo _for_ conocemos la cantidad de veces ```length``` que la estructura repetirá una o varias instrucciones.
+```js
+var nombres = ["Andres", "Diego", "Paty", "Ramiro", "Silvia"]
+
+for(var i = 0; i < nombres.length; i++){
+    console.log(`Hola ${nombres[i]}`)
+}
+```
+
 
 __for ... of__
-``` for ... of ```
+El ciclo ``` for ... of ``` es una variación del ciclo _for_ que se utiliza para recorrer los valores de los elementos de un _array_, es decir, recorre los valores de un objeto iterable.
+```js
+for ( var <elementoSingular> of <array>){
+    // Bloque de código
+}
+```
+El ciclo ```for ... of``` solo accede al valor de cada uno de los elementos del array. Por consiguiente, NO puede cabiar el array original, porque se necesita su índice para acceder y cambiar su valor. Pero se puede crear otro array vacio para llenarlo con los nuevos valores.
+```js
+var numbers = [5, 4, 3, 2, 1]
+var duplicates = []
+
+for (var number of numbers) {
+  duplicates.push(number * 2)
+}
+
+console.log(duplicates) // [ 10, 8, 6, 4, 2 ]
+```
+
+
+__for ... in__
+Recorre las propiedades de un objeto
+
+
 
 __while__
-``` while ``` 
+Recorre un bloque de código mientras se cumple una condición específica
+``` while( <condicion> ){ <Bloque de código >} ``` 
+
+
+
+__do ... while__
+ Recorre un bloque de código mientras se cumple una condición específica
 
 
 

@@ -51,7 +51,8 @@ var name="User";
 // hoisting con funciones
 saluda();   // si funciona la llamada a la funcion
 function saluda(){
-    console.log("hola "+miName);
+    console.log("hola "+miName);    // concatenar variable
+    console.log(`Hola ${miName}`);    // interpolación de variable
 }
 var miName="Italivi";   // pero la variable aun no se inicializaba
 
