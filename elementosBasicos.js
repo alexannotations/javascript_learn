@@ -62,3 +62,9 @@ var miName="Italivi";   // pero la variable aun no se inicializaba
 0 == [] ;    // true
 [] == "0" ;   // false
 
+
+// esta sentencia esta mal desarrollada, pero funciona.
+switch (false) { 
+	case false: console.log("Soy falso :( ") 
+	case true: console.log("Soy verdadero!") 
+}

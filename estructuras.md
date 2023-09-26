@@ -90,7 +90,7 @@ __do ... while__
 
 
 
-## Arrays
+## [Arrays](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
 Un array se inicia mediante la sintaxis de corchetes ```[]``` y es tipo de dato _objeto_, sus elementos principales son el _indice_ y el _elemento_, ademas un array puede contener más arrays.
 ```js
 var frutas = ["Manzana", "Naranja", "Fresa"]
@@ -108,17 +108,61 @@ frutas[1] = "Piña"
 console.log(frutas) // ["Manzana", "Piña", "Fresa"]
 ```
 Los métodos de arrays son funcionalidades que se acceden mediante la notación punto ```<array>.<metodo>(<argumentos>)```
+Se pueden asignar _string keys_, pasando un string entre corchetes en vez del índice.
+En el caso de arrays y objetos, un ```console.table()``` luce mejor que un clásico ```console.log()```
 
 ### métodos mutables
 El método __push__ agrega uno o varios elementos al _final_ del array original, recibe como argumento los valores a agregar y retorna el número de elementos del array mutado.
 El método __unshift__ agrega uno o varios elementos al _inicio_ del array original, recibe como argumento los valores a agregar, retorna el número de elementos del array mutado.
-El método __pop__ extrae el elemento del _final_ del array original.
+El método __pop__ extrae y borra el elemento del _final_ del array original.
 El método __shift__ extrae el elemento del _inicio_ del array original.
 ### métodos no mutables
 El método __indexOf__ muestra el _índice_ del elemento especificado como argumento. Si el elemento no se encuentra en el array, el método devuelve el valor _-1_.
+### métodos de recorridos
+__filter__ Crea un nuevo array con los elementos del array que se pasó como parámetro y que cumplan con la condición definida..
+__map__ mapea todo el contenido del array y trae los atributos. Crea un nuevo array con los resultados de la llamada a la fucnion indicada aplicados a cada uno de sus elementos.
+__find__ valida y ayuda a encontrar la primer coincidencia generando un nuevo array.
+__forEach__ no genera un nuevo array, ejecuta la funcion por cada uno de los elementos del array sin modificarlo.
+__some__ regresa _true_ o _false_ segun una validacion.
 
-Se pueden asignar _string keys_, pasando un string entre corchetes en vez del índice.
-En el caso de arrays y objetos, un ```console.table()``` luce mejor que un clásico ```console.log()```
+
+```js
+var articulos = [
+    {nombre:"Bici", costo: 3000},
+    {nombre:"TV", costo: 2500},
+    {nombre:"libro", costo: 310},
+    {nombre:"Celular", costo: 10000},
+    {nombre:"Laptop", costo: 22000},
+    {nombre:"mouse", costo: 230},
+];
+
+// filter()
+var articulosFiltrados = articulos.filter(function(article){
+    return article.costo <= 500;
+});
+
+// map()
+var nombreArticulo = articulos.map(function(article){
+    return article.nombre;
+})
+
+// find
+var encuentraArticulo = articulos.find(function(article){
+    return article.nombre==="Laptop";
+})
+
+// forEach
+articulos.forEach(function(article){
+    console.log(article.nombre);
+})
+
+// some
+var articulosBaratos = articulos.some(function(article){
+    return article.costo <= 700;
+})
+
+```
+
 
 
 
