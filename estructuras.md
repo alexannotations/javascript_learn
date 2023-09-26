@@ -118,6 +118,7 @@ El método __pop__ extrae y borra el elemento del _final_ del array original.
 El método __shift__ extrae el elemento del _inicio_ del array original.
 ### métodos no mutables
 El método __indexOf__ muestra el _índice_ del elemento especificado como argumento. Si el elemento no se encuentra en el array, el método devuelve el valor _-1_.
+__isArray__ retorna _true_ o _false_
 ### métodos de recorridos
 __filter__ Crea un nuevo array con los elementos del array que se pasó como parámetro y que cumplan con la condición definida..
 __map__ mapea todo el contenido del array y trae los atributos. Crea un nuevo array con los resultados de la llamada a la fucnion indicada aplicados a cada uno de sus elementos.
