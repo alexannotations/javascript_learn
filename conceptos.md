@@ -28,5 +28,5 @@ Permiten realizar calculos y comparaciones, no olvidar considerar su orden de pr
  - de comparación   ```<``` , ```>``` , ```<=``` , ```>=``` , ```!==``` , ```==``` , ```===```
  - lógicos          ```&&``` , ```||``` , ```!```
  - concatenación    ```+```
-
+ - spread operator   ```...```
 

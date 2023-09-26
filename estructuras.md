@@ -120,3 +120,52 @@ El método __indexOf__ muestra el _índice_ del elemento especificado como argum
 Se pueden asignar _string keys_, pasando un string entre corchetes en vez del índice.
 En el caso de arrays y objetos, un ```console.table()``` luce mejor que un clásico ```console.log()```
 
+
+
+
+## Objetos
+Para declarar un objeto la sintaxis es:
+```this``` es una variable especifica, que hace referencia al objeto, apunta al prototipo padre
+```js
+var myObject = {
+  property : "value",
+  funcion: function(){
+    // ...
+    }
+  }; 
+```
+Se guarda una variable tipo objeto en memoria con referencia al nombre de la variable, Ejemplo:
+```js
+ var myCar = { 
+  color: "Red", 
+  year: 2015, 
+  detalle: function(){
+      console.log(`Auto ${this.color} ${this.year}`)
+    }
+  }
+ ```
+ Para acceder a un objeto:
+ ```js
+  myCar.year;
+  myCar.detalle();
+ ```
+
+### Función constructora
+Los parametros son las propiedades que tendra el objeto
+```new``` es un operador que genera una nueva instancia de la funcion constructora
+ ```js
+  function auto(marca, model, year, licensePlate ){
+    this.marca = marca;
+    this.model = model;
+    this.year = year;
+    this.licensePlate = licensePlate;
+  }
+
+  var autoNuevo = new auto("Tesla","Model 3",2023,"placas");
+  
+ ```
+
+
+### Copiar objetos
+Cuando se utiliza el ```=``` se copia la referencia a dicho objeto con sus respectivos valores, en vez de copiar los valores de los objetos, por lo que javaScript permite solucionar este problema utilizando la función ```Object.assign``` al copiarlos valores de los objetos. Pero si un objeto esta conformado por subobjetos, pueden existir problemas, por lo que para copiar objetos de JavaScript se utilizan las funciones ```JSON.stringify``` y ```JSON.parse```. La primera (```JSON.stringify```) se encarga de transformar los objetos en cadenas de texto mientras que, la segunda (```JSON.parse```) se encarga de transformar cadenas de texto en objetos.
+

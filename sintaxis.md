@@ -143,6 +143,9 @@ Los _bigint_ no son compatibles con todas las funciones y métodos de JavaScript
 
 ## Funciones
 
+En los parametros de las funciones en js; los objetos incluidos los arrays y las funciones se pasan por referencia, mientras que los strings, numeros y booleanos se pasan por valor.
+
+
 ### Function declaration o function statement
 Se le aplica hoisting
 ```js
