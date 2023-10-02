@@ -20,6 +20,17 @@ Es el proceso en el cual JavaScript intenta _convertir automáticamente un valor
     - explicitas (forza la conversion de tipos)
 
 
+## Modo estricto
+
+Es un conjunto de reglas y características que proporcionan una mayor seguridad y control en el código. Se activa mediante la palabra clave ```"use strict"``` al comienzo de un archivo o al principio de una función.
+ - NO permite redeclarar una variable con el mismo nombre en el mismo ambito.
+ - NO permite cambiar el tipo de dato al hacer una reasignación.
+
+
+__Reasignación__ se refiere al proceso de darle un nuevo valor a una variable existente.
+__Redeclaración__ o _reinicializar_ se refiere al proceso de crear una nueva variable con el mismo nombre de una variable existente.
+
+
 ## [Operadores (unitarios y binarios)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
 Permiten realizar calculos y comparaciones, no olvidar considerar su orden de prioridad, prelación y precedencia.

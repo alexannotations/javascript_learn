@@ -192,7 +192,11 @@ Se guarda una variable tipo objeto en memoria con referencia al nombre de la var
  Para acceder a un objeto:
  ```js
   myCar.year;
+  myCar['year'];
   myCar.detalle();
+  Object.entries(myCar);    // devuelve un arreglo de arreglos con los nombres y propiedades
+  Object.values(myCar); // regresa un array de las propiedades del objeto
+  Object.keys(myCar);   // devuelve los nombres de las propiedades 
  ```
 
 ### Función constructora

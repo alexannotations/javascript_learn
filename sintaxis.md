@@ -6,7 +6,7 @@ https://jsconsole.com/
 
 el tipo de dato se determina en tiempo de ejecución, por el tipado.
 - __var__: Forma de declarar las variables hasta ECMAScript 5. Casi ya no se usa porque es de forma global y tiene las siguientes características:
-  - Se puede reinicializar
+  - Se puede reinicializar (redeclaración)
   - Se puede reasignar
   - Su alcance es global
 
@@ -21,6 +21,19 @@ el tipo de dato se determina en tiempo de ejecución, por el tipado.
   - No se puede reinicilizar
   - Se puede reasignar
   - Su contexto de es bloque: Solo funciona dentro de un bloque {}, fuera de ello no.
+
+
+||var|let|const|
+|-|-|-|-|
+|Reasignación|✔|✔|❌|
+|Reinicializar|✔|❌|❌|
+|Propiedad del objeto global (window)|✔|❌|❌|
+|Function Scope|✔|✔|✔|
+|Block Scope|❌|✔|✔|
+|Hoisting|✔|✔|✔|
+|TDZ (Temporal Dead Zone)|❌|✔|✔|
+
+
 
 ```js
 var name; // declarar
