@@ -197,7 +197,7 @@ saluda();
 
 
 ### Arrow function
-Se define utilizando la sintaxis ```() =>```. Es una forma más concisa de escribir funciones y es útil para funciones de una sola línea.
+Se define utilizando la sintaxis ```() =>```. Es una forma más concisa de escribir funciones y es útil para funciones de una sola línea. Si se desea pasar algun argumento se coloca dentro del parentesis.
 ```js
 let saluda = () => console.log("Hola");
 
@@ -208,7 +208,7 @@ saluda();
 
 
 # Sintaxis
-El punto y coma es opcionall, a excepción de algunos casos especiales como en ciclos o cuando se quiere separar declaraciones en una misma línea. Se puede usar para facilitar la legibilidad
+El punto y coma es opcional, a excepción de algunos casos especiales como en ciclos o cuando se quiere separar declaraciones en una misma línea. Se puede usar para facilitar la legibilidad
 ```js
 const saludo
 console.log(saludo) // "Hola"
